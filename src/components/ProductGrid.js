@@ -63,7 +63,7 @@ const ProductGrid = () => {
           }) => (
             <div className="PostCard Product" key={id}>
               <Link to={`/product/${handle}/`}>
-                {firstImage && firstImage.localFile && (
+                {firstImage && firstImage.localFile && firstImage.localFile.childImageSharp && (
                   <Image
                     fluid={firstImage.localFile.childImageSharp.fluid}
                     alt={handle}
